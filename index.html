@@ -2,65 +2,546 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background-image: url(./wallpapersden.com_waves-sea_1680x1050.jpg);
-            background-attachment: fixed;
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        .btn{
-            color: aliceblue;
-        }
-        .btn button{
-            background-color: black;
-            color: aliceblue;
-        }
-         hr{
-           border-color: blue; 
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      justify-content: center;
+      background-image: url(./wallpapersden.com_waves-sea_1680x1050.jpg);
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    h1{
+      text-shadow: 0 0 3px #06228a;
+      text-align: center;
+    }
+    button {
+      padding: 17px 40px;
+      border-radius: 50px;
+      cursor: pointer;
+      border: 0;
+      background-color: white;
+      box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 15px;
+      transition: all 0.5s ease;
+    }
+
+    button:hover {
+      letter-spacing: 3px;
+      background-color: hsl(261deg 80% 48%);
+      color: hsl(0, 0%, 100%);
+      box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    }
+
+    button:active {
+      letter-spacing: 3px;
+      background-color: hsl(261deg 80% 48%);
+      color: hsl(0, 0%, 100%);
+      box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+      transform: translateY(10px);
+      transition: 100ms;
+    }
+
+    hr {
+      border: 3px groove white;
+    }
+  </style>
 </head>
 <body>
-    <h1><div class="btn">HTML</div></h1>
-    <hr />
-    <div class="btn">
-      <a href="./HTML-TASK/task 1.html">
-        <button>summary tag task</button>
-      </a>
-      <a href="./HTML-TASK/Table Task.html">
-        <button>table task</button>
-      </a>
-      <a href="./HTML-TASK/task 3_1.html">
-        <button>table task</button>
-      </a>
-      <a href="./HTML-TASK/task 3_2.html">
-        <button>table task</button>
-      </a>
-      <a href="./HTML-TASK/task3_3.html">
-        <button>table task</button>
-      </a>
-    </div>
-    <hr />
-    <h1><div class="btn">CSS</div></h1>
-    <hr />
-    <div class="btn">
-      <a href="./CSS-TASK/task-2.html">
-        <button>alt img task</button>
-      </a>
-      <a href="./CSS-TASK/task-of media.html">
-        <button>media query task</button>
-      </a>
-      <a href="./CSS-TASK/example-of-task.html">
-        <button>example task</button>
-      </a>
-      <a href="./CSS-TASK/Responsive-img-task-2.html">
-        <button>responsive img task</button>
-      </a>
-    </div>
-    <hr />
+  <div>
+    <h1 class="ttile">HTML</h1>
+  </div>
+  <hr />
+  <div class="container">
+    <a href="./HTML-TASK/task 1.html">
+      <button>summary tag task</button>
+    </a>
+    <a href="./HTML-TASK/Table Task.html">
+      <button>table task</button>
+    </a>
+    <a href="./HTML-TASK/task 3_1.html">
+      <button>table task</button>
+    </a>
+    <a href="./HTML-TASK/task 3_2.html">
+      <button>table task</button>
+    </a>
+    <a href="./HTML-TASK/task3_3.html">
+      <button>table task</button>
+    </a>
+    <a href="./HTML-TASK/task 4.html">
+      <button>table task</button>
+    </a>
+    <a href="./HTML-TASK/a tag.html">
+      <button>a tag task</button>
+    </a>
+    <a href="./HTML-TASK/abbe tag.html">
+      <button>abbr tag task</button>
+    </a>
+    <a href="./HTML-TASK/address.html">
+      <button>address tag task</button>
+    </a>
+    <a href="./HTML-TASK/area tag.html">
+      <button>area tag task</button>
+    </a>
+    <a href="./HTML-TASK/article.html">
+      <button>article tag task</button>
+    </a>
+    <a href="./HTML-TASK/aside tag.html">
+      <button>aside tag task</button>
+    </a>
+    <a href="./HTML-TASK/audio.html">
+      <button>audio tag task</button>
+    </a>
+    <a href="./HTML-TASK/b tag.html">
+      <button>b tag task</button>
+    </a>
+    <a href="./HTML-TASK/base font.html">
+      <button>base font tag task</button>
+    </a>
+    <a href="./HTML-TASK/base tsg.html">
+      <button>base tag task</button>
+    </a>
+    <a href="./HTML-TASK/bdi tag.html">
+      <button>bdi tag task</button>
+    </a>
+    <a href="./HTML-TASK/bdo tag.html">
+      <button>bdo tag task</button>
+    </a>
+    <a href="./HTML-TASK/big tag.html">
+      <button>dig tag task</button>
+    </a>
+    <a href="./HTML-TASK/blockquote tag.html">
+      <button>blockquote tag task</button>
+    </a>
+    <a href="./HTML-TASK/br tag.html">
+      <button>br tag task</button>
+    </a>
+    <a href="./HTML-TASK/button tag.html">
+      <button>button tag task</button>
+    </a>
+    <a href="./HTML-TASK/caption tag.html">
+      <button>caption tag task</button>
+    </a>
+    <a href="./HTML-TASK/center.html">
+      <button>center tag task</button>
+    </a>
+    <a href="./HTML-TASK/cite tag.html">
+      <button>cite tag task</button>
+    </a>
+    <a href="./HTML-TASK/cnavas tag.html">
+      <button>cnavas tag task</button>
+    </a>
+    <a href="./HTML-TASK/code tag.html">
+      <button>code tag task</button>
+    </a>
+    <a href="./HTML-TASK/col tag.html">
+      <button>col tag task</button>
+    </a>
+    <a href="./HTML-TASK/data tag.html">
+      <button>data tag task</button>
+    </a>
+    <a href="./HTML-TASK/datalist tag.html">
+      <button>datalist tag task</button>
+    </a>
+    <a href="./HTML-TASK/dd tag.html">
+      <button>dd tag task</button>
+    </a>
+    <a href="./HTML-TASK/del tag.html">
+      <button>del tag task</button>
+    </a>
+    <a href="./HTML-TASK/demo.html">
+      <button>demo task</button>
+    </a>
+    <a href="./HTML-TASK/details tag.html">
+      <button>details tag task</button>
+    </a>
+    <a href="./HTML-TASK/dfn tag.html">
+      <button>dfn tag task</button>
+    </a>
+    <a href="./HTML-TASK/dialog tag.html">
+      <button>dialog tag task</button>
+    </a>
+    <a href="./HTML-TASK/dir tag.html">
+      <button>dir tag task</button>
+    </a>
+    <a href="./HTML-TASK/div tag.html">
+      <button>div tag task</button>
+    </a>
+    <a href="./HTML-TASK/dl.html">
+      <button>dl tag task</button>
+    </a>
+    <a href="./HTML-TASK/em tag.html">
+      <button>em tag task</button>
+    </a>
+    <a href="./HTML-TASK/embed tag.html">
+      <button>embed tag task</button>
+    </a>
+    <a href="./HTML-TASK/fieldset tag.html">
+      <button>fieldset tag task</button>
+    </a>
+    <a href="./HTML-TASK/figcaption tag.html">
+      <button>figcaption tag task</button>
+    </a>
+    <a href="./HTML-TASK/font tag.html">
+      <button>font tag task</button>
+    </a>
+    <a href="./HTML-TASK/footer tag.html">
+      <button>footer tag task</button>
+    </a>
+    <a href="./HTML-TASK/form tag.html">
+      <button>fora tag task</button>
+    </a>
+    <a href="./HTML-TASK/h1 to h6 tag.html">
+      <button>h1 to h6 tag task</button>
+    </a>
+    <a href="./HTML-TASK/header tag.html">
+      <button>header tag task</button>
+    </a>
+    <a href="./HTML-TASK/hgroup.html">
+      <button>hgroup tag task</button>
+    </a>
+    <a href="./HTML-TASK/hr tag.html">
+      <button>hr tag task</button>
+    </a>
+    <a href="./HTML-TASK/iframe tag.html">
+      <button>iframe tag task</button>
+    </a>
+    <a href="./HTML-TASK/kbd tag.html">
+      <button>kbd tag task</button>
+    </a>
+    <a href="./HTML-TASK/legend tag.html">
+      <button>legend tag task</button>
+    </a>
+    <a href="./HTML-TASK/link tag.html">
+      <button>link tag task</button>
+    </a>
+    <a href="./HTML-TASK/map tag.html">
+      <button>map tag task</button>
+    </a>
+    <a href="./HTML-TASK/mark tag.html">
+      <button>mark tag task</button>
+    </a>
+    <a href="./HTML-TASK/menu.html">
+      <button>menu tag task</button>
+    </a>
+    <a href="./HTML-TASK/meta tag.html">
+      <button>meta tag task</button>
+    </a>
+    <a href="./HTML-TASK/meter tag.html">
+      <button>meter tag task</button>
+    </a>
+    <a href="./HTML-TASK/nav tag.html">
+      <button>nav tag task</button>
+    </a>
+    <a href="./HTML-TASK/object tag.html">
+      <button>object tag task</button>
+    </a>
+    <a href="./HTML-TASK/ol tag.html">
+      <button>ol tag task</button>
+    </a>
+    <a href="./HTML-TASK/optgroup tag.html">
+      <button>optgroup tag task</button>
+    </a>
+    <a href="./HTML-TASK/option tag.html">
+      <button>option tag task</button>
+    </a>
+    <a href="./HTML-TASK/output tag.html">
+      <button>output tag task</button>
+    </a>
+    <a href="./HTML-TASK/param tag.html">
+      <button>param tag task</button>
+    </a>
+    <a href="./HTML-TASK/pre tag.html">
+      <button>pre tag task</button>
+    </a>
+    <a href="./HTML-TASK/prectis pro.html">
+      <button>prectis tag task</button>
+    </a>
+    <a href="./HTML-TASK/progress tag.html">
+      <button>program tag task</button>
+    </a>
+    <a href="./HTML-TASK/q tag.html">
+      <button>q tag task</button>
+    </a>
+    <a href="./HTML-TASK/s tag.html">
+      <button>s tag task</button>
+    </a>
+    <a href="./HTML-TASK/samp tag.html">
+      <button>samp tag task</button>
+    </a>
+    <a href="./HTML-TASK/script.html">
+      <button>script tag task</button>
+    </a>
+    <a href="./HTML-TASK/search tag.html">
+      <button>search tag task</button>
+    </a>
+    <a href="./HTML-TASK/small tag.html">
+      <button>small tag task</button>
+    </a>
+    <a href="./HTML-TASK/source tag.html">
+      <button>source tag task</button>
+    </a>
+    <a href="./HTML-TASK/span tag.html">
+      <button>span tag task</button>
+    </a>
+    <a href="./HTML-TASK/strike tag.html">
+      <button>strike tag task</button>
+    </a>
+    <a href="./HTML-TASK/strong tag.html">
+      <button>strong tag task</button>
+    </a>
+    <a href="./HTML-TASK/style tag.html">
+      <button>style tag task</button>
+    </a>
+    <a href="./HTML-TASK/sub tag.html">
+      <button>sub tag task</button>
+    </a>
+    <a href="./HTML-TASK/summary.html">
+      <button>summary tag task</button>
+    </a>
+    <a href="./HTML-TASK/sup tag.html">
+      <button>sup tag task</button>
+    </a>
+    <a href="./HTML-TASK/svg tag.html">
+      <button>svg tag task</button>
+    </a>
+    <a href="./HTML-TASK/table tag.html">
+      <button>table tag task</button>
+    </a>
+    <a href="./HTML-TASK/template tag.html">
+      <button>template tag task</button>
+    </a>
+    <a href="./HTML-TASK/textarea tag.html">
+      <button>textarea tag task</button>
+    </a>
+    <a href="./HTML-TASK/tfoot tag.html">
+      <button>tfoot tag task</button>
+    </a>
+    <a href="./HTML-TASK/time tag.html">
+      <button>time tag task</button>
+    </a>
+    <a href="./HTML-TASK/tt tag.html">
+      <button>tt tag task</button>
+    </a>
+    <a href="./HTML-TASK/ul tag.html">
+      <button>ul tag task</button>
+    </a>
+    <a href="./HTML-TASK/var tag.html">
+      <button>var tag task</button>
+    </a>
+    <a href="./HTML-TASK/wbr tag.html">
+      <button>wbr tag task</button>
+    </a>
+  </div>
+  <hr />
+  <div>
+    <h1 class="ttile">CSS</h1>
+  </div>
+  <hr />
+  <div class="container">
+    <a href="./CSS-TASK/task-2.html">
+      <button>alt img task</button>
+    </a>
+    <a href="./CSS-TASK/task-of media.html">
+      <button>media query task</button>
+    </a>
+    <a href="./CSS-TASK/example-of-task.html">
+      <button>example task</button>
+    </a>
+    <a href="./CSS-TASK/Responsive-img-task-2.html">
+      <button>responsive img task</button>
+    </a>
+    <a href="./CSS-TASK/attribute task.html">
+      <button>attribute task</button>
+    </a>
+    <a href="./CSS-TASK/attribute task_blank.html">
+      <button>attribute task_blank</button>
+    </a>
+    <a href="./CSS-TASK/attribute task_top.html">
+      <button>attribute task_top</button>
+    </a>
+    <a href="./CSS-TASK/!important-1.html">
+      <button>!important task</button>
+    </a>
+    <a href="./CSS-TASK/!important-2.html">
+      <button>!important task</button>
+    </a>
+    <a href="./CSS-TASK/!important-3.html">
+      <button>!important task</button>
+    </a>
+    <a href="./CSS-TASK/active.html">
+      <button>active task</button>
+    </a>
+    <a href="./CSS-TASK/atag hover.html">
+      <button>hover task</button>
+    </a>
+    <a href="./CSS-TASK/border-radius.html">
+      <button>border-radius task</button>
+    </a>
+    <a href="./CSS-TASK/borderimg.html">
+      <button>borderimg task</button>
+    </a>
+    <a href="./CSS-TASK/checked.html">
+      <button>checked task</button>
+    </a>
+    <a href="./CSS-TASK/CSS Template-2.html">
+      <button>template task</button>
+    </a>
+    <a href="./CSS-TASK/CSS Template.html">
+      <button>template task</button>
+    </a>
+    <a href="./CSS-TASK/Different Images Different Devices.html">
+      <button>Different images Differentdevices task</button>
+    </a>
+    <a href="./CSS-TASK/disabled.html">
+      <button>disabled task</button>
+    </a>
+    <a href="./CSS-TASK/divhover.html">
+      <button>div hover task</button>
+    </a>
+    <a href="./CSS-TASK/felx.html">
+      <button>felx task</button>
+    </a>
+    <a href="./CSS-TASK/first-child.html">
+      <button>first-child task</button>
+    </a>
+    <a href="./CSS-TASK/flex-2.html">
+      <button>flex task</button>
+    </a>
+    <a href="./CSS-TASK/flex-3.html">
+      <button>flex task</button>
+    </a>
+    <a href="./CSS-TASK/flex-4.html">
+      <button>flex task</button>
+    </a>
+    <a href="./CSS-TASK/grid-2.html">
+      <button>grid task</button>
+    </a>
+    <a href="./CSS-TASK/grid-3.html">
+      <button>grid task</button>
+    </a>
+    <a href="./CSS-TASK/grid-column-gap.html">
+      <button>grid-column-gap task</button>
+    </a>
+    <a href="./CSS-TASK/grid-gap-2.html">
+      <button>grid-gap task</button>
+    </a>
+    <a href="./CSS-TASK/grid-gap-3.html">
+      <button>grid-gap task</button>
+    </a>
+    <a href="./CSS-TASK/grid-gap.html">
+      <button>grid-gap task</button>
+    </a>
+    <a href="./CSS-TASK/grid.html">
+      <button>grid task</button>
+    </a>
+    <a href="./CSS-TASK/grid1.html">
+      <button>grid task</button>
+    </a>
+    <a href="./CSS-TASK/hover.html">
+      <button>hover task</button>
+    </a>
+    <a href="./CSS-TASK/lang.html">
+      <button>lang task</button>
+    </a>
+    <a href="./CSS-TASK/letter.html">
+      <button>letter task</button>
+    </a>
+    <a href="./CSS-TASK/line.html">
+      <button>line task</button>
+    </a>
+    <a href="./CSS-TASK/math example-2.html">
+      <button>math task</button>
+    </a>
+    <a href="./CSS-TASK/math example-3.html">
+      <button>math task</button>
+    </a>
+    <a href="./CSS-TASK/math example.html">
+      <button>math task</button>
+    </a>
+    <a href="./CSS-TASK/media-div-example-2.html">
+      <button>media-div-example task</button>
+    </a>
+    <a href="./CSS-TASK/media-div-example.html">
+      <button>media-div-example task</button>
+    </a>
+    <a href="./CSS-TASK/media.html">
+      <button>media task</button>
+    </a>
+    <a href="./CSS-TASK/min-device-width.html">
+      <button>min-device-width task</button>
+    </a>
+    <a href="./CSS-TASK/Responsive Web Design - Frameworks-1.html">
+      <button>RWD framework task</button>
+    </a>
+    <a href="./CSS-TASK/Responsive Web Design - Frameworks.html">
+      <button>RWD framework task</button>
+    </a>
+    <a href="./CSS-TASK/Responsive Web Design - Videos-2.html">
+      <button>RWD video task</button>
+    </a>
+    <a href="./CSS-TASK/Responsive Web Design - Videos.html">
+      <button>RWD video task</button>
+    </a>
+    <a href="./CSS-TASK/Responsive-img-task-2.html">
+      <button>Responsive img task</button>
+    </a>
+    <a href="./CSS-TASK/Responsive-img.html">
+      <button>Responsive-img task</button>
+    </a>
+    <a href="./CSS-TASK/Template using Flexbox-unequal.html">
+      <button>template-flexbox-unequal task</button>
+    </a>
+    <a href="./CSS-TASK/Template using Flexbox.html">
+      <button>template-flexbox task</button>
+    </a>
+    <a href="./CSS-TASK/Template using Float-unequal.html">
+      <button>template-float-unequal task</button>
+    </a>
+    <a href="./CSS-TASK/Template using Float.html">
+      <button>template-float task</button>
+    </a>
+    <a href="./CSS-TASK/Template using Grid-unequal.html">
+      <button>template-grid-unequal task</button>
+    </a>
+    <a href="./CSS-TASK/Template using Grid.html">
+      <button>template-grid task</button>
+    </a>
+  </div>
+  <hr />
+  <div>
+    <h1 class="ttile">07-08-2024</h1>
+  </div>
+  <hr />
+  <div class="container">
+    <a href="./CSS-TASK/position-static.html">
+      <button>position static task</button>
+    </a>
+    <a href="./CSS-TASK/position-relative.html">
+      <button>position relative taskk</button>
+    </a>
+    <a href="./CSS-TASK/position-fixed.html">
+      <button>position fixed task</button>
+    </a>
+    <a href="./CSS-TASK/position-absolute.html">
+      <button>position absolute task</button>
+    </a>
+    <a href="./CSS-TASK/position-sticky.html  ">
+      <button>position sticky task</button>
+    </a>
+  </div>
+  <hr />
 </body>
+
 </html>
