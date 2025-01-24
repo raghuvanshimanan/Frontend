@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #mydiv {
+            text-align: center;
+            padding: 40px;
+            background-color: lightblue;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div popover id="mydiv">
+        <h2>Popover</h2>
+        <hr>
+        <p>A popover is an element that is placed on top of everything else.</p>
+        <p>It can be used when you want to tell something important.</p>
+        <button popovertarget="mydiv" popovertargetaction="hide">Close</button>
+    </div>
+
+    <button popovertarget="mydiv">Click me!</button>
+</body>
+
+</html>
