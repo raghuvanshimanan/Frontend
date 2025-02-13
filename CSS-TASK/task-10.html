@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating X-Shape Pattern</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            animation: rotate 5s linear infinite;
+        }
+
+        .box {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            color: yellow;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Positioning boxes in an X shape */
+        .box:nth-child(1) {
+            background-color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(-130px, -130px);
+            z-index: 1;
+        }
+
+        .box:nth-child(2) {
+            background-color: green;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(-90px, -90px);
+            z-index: 2;
+        }
+
+        .box:nth-child(3) {
+            background-color: blue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(-50px, -50px);
+            z-index: 3;
+        }
+
+        .box:nth-child(4) {
+            background-color: purple;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(0px, 0px);
+            z-index: 4;
+        }
+
+        .box:nth-child(5) {
+            background-color: blue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(50px, 50px);
+            z-index: 3;
+        }
+
+        .box:nth-child(6) {
+            background-color: green;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(90px, 90px);
+            z-index: 2;
+        }
+
+        .box:nth-child(7) {
+            background-color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(130px, 130px);
+            z-index: 1;
+        }
+
+        .box:nth-child(8) {
+            background-color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(-130px, 130px);
+            z-index: 1;
+        }
+
+        .box:nth-child(9) {
+            background-color: green;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(-90px, 90px);
+            z-index: 2;
+        }
+
+        .box:nth-child(10) {
+            background-color: blue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(-50px, 50px);
+            z-index: 3;
+        }
+
+        .box:nth-child(11) {
+            background-color: blue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(50px, -50px);
+            z-index: 3;
+        }
+
+        .box:nth-child(12) {
+            background-color: green;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(90px, -90px);
+            z-index: 2;
+        }
+
+        .box:nth-child(13) {
+            background-color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(130px, -130px);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+    </div>
+</body>
+
+</html>
