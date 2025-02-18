@@ -45,7 +45,6 @@
             }
         }
 
-        /* Positioning boxes in an X shape */
         .box:nth-child(1) {
             background-color: red;
             top: 50%;
@@ -168,6 +167,36 @@
         <div class="box">12</div>
         <div class="box">13</div>
     </div>
+
+    <script>
+        document.querySelectorAll('.container ').forEach(box => {
+            box.addEventListener('mousedown', function (event) {
+                let shiftX = event.clientX - box.getBoundingClientRect().left;
+                let shiftY = event.clientY - box.getBoundingClientRect().top;
+                box.style.position = 'absolute';
+                box.style.zIndex = 1000;
+
+                function moveAt(pageX, pageY) {
+                    box.style.left = pageX - shiftX + 'px';
+                    box.style.top = pageY - shiftY + 'px';
+                }
+
+                function onMouseMove(event) {
+                    moveAt(event.pageX, event.pageY);
+                }
+
+                document.addEventListener('mousemove', onMouseMove);
+
+                box.addEventListener('mouseup', function () {
+                    document.removeEventListener('mousemove', onMouseMove);
+                }, { once: true });
+            });
+
+            box.ondragstart = function () {
+                return false;
+            };
+        });
+    </script>
 </body>
 
 </html>
