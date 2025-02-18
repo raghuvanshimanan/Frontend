@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating X-Shape Pattern with Drag</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            animation: rotate 5s linear infinite;
+        }
+
+        .box {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            color: yellow;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: grab;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="box" style="background-color: red; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-130px, -130px);">1</div>
+        <div class="box" style="background-color: green; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-90px, -90px);">2</div>
+        <div class="box" style="background-color: blue; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-50px, -50px);">3</div>
+        <div class="box" style="background-color: purple; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0px, 0px);">4</div>
+        <div class="box" style="background-color: blue; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(50px, 50px);">5</div>
+        <div class="box" style="background-color: green; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(90px, 90px);">6</div>
+        <div class="box" style="background-color: red; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(130px, 130px);">7</div>
+        <div class="box" style="background-color: red; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-130px, 130px);">8</div>
+        <div class="box" style="background-color: green; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-90px, 90px);">9</div>
+        <div class="box" style="background-color: blue; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-50px, 50px);">10</div>
+        <div class="box" style="background-color: blue; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(50px, -50px);">11</div>
+        <div class="box" style="background-color: green; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(90px, -90px);">12</div>
+        <div class="box" style="background-color: red; top: 50%; left: 50%; transform: translate(-50%, -50%) translate(130px, -130px);">13</div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.box').forEach(box => {
+            box.addEventListener('mousedown', function (event) {
+                let shiftX = event.clientX - box.getBoundingClientRect().left;
+                let shiftY = event.clientY - box.getBoundingClientRect().top;
+                box.style.position = 'absolute';
+                box.style.zIndex = 1000;
+
+                function moveAt(pageX, pageY) {
+                    box.style.left = pageX - shiftX + 'px';
+                    box.style.top = pageY - shiftY + 'px';
+                }
+
+                function onMouseMove(event) {
+                    moveAt(event.pageX, event.pageY);
+                }
+
+                document.addEventListener('mousemove', onMouseMove);
+
+                box.addEventListener('mouseup', function () {
+                    document.removeEventListener('mousemove', onMouseMove);
+                }, { once: true });
+            });
+
+            box.ondragstart = function () {
+                return false;
+            };
+        });
+    </script>
+</body>
+
+</html>
